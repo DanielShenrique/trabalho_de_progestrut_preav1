@@ -37,7 +37,7 @@ int main(){
         printf("O nome da %i pessoa:\n", i+1);
         fgets(pessoa[i].name, 100, stdin);
 
-        printf("O sexo da %i pessoa:\n", i+1);
+        printf("digite se o sexo da %i pessoa e Masculino ou Feminino:\n", i+1);
         pessoa[i].gender = TakeAndCheckGender();
 
         printf("A idade(em anos) da %i pessoa:\n", i+1);
@@ -84,7 +84,12 @@ int main(){
         printf("Quer achar mais alguem?\n");
         printf("0 para fechar e 1 para continuar\n");
         scanf("%i%*c", &flag);
-}
+
+        if(flag == 1){
+            system("cls");
+        }
+    }
+
     system("pause");
     return 0;
 }
@@ -101,7 +106,7 @@ char TakeAndCheckGender(){
             fgets(gender, 20, stdin);
         }
         else{
-            printf("Tente de novo, comece com letras maiusculas\n");
+            printf("Tente de novo, comece a palavra com letras maiusculas\n");
             fgets(gender, 20, stdin);
         }
         
